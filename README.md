@@ -1,54 +1,56 @@
-# React + TypeScript + Vite
+# GrowthX Animation Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a submission for the GrowthX Club Frontend SDE assignment. The objective was to replicate a given animation using HTML, CSS, and JavaScript within a React-based framework — without using Lottie or dynamic imports.
 
-Currently, two official plugins are available:
+## Demo Video
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[Watch the Explanation Video](https://www.loom.com/share/de732ae48ed6421f849c6aad3d15fc3d?sid=98d0236b-6716-4bb9-a9ab-b2aa05b96ba1)  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Used
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- **React** (Vite)
+- **Tailwind CSS**
+- **Framer Motion**
+- **HTML + CSS + JavaScript**
+
+---
+
+## Features
+- Smooth transitions using Framer Motion and CSS keyframes
+- No dynamic imports – all elements are instantly loaded
+- Performance-optimized and re-triggerable CSS animations
+
+---
+
+## How to Run Locally
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/litikesh/smooth-animation-task.git
+cd smooth-animation-task
+````
+
+2. **Install dependencies**
+
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+3. **Run the development server**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm run dev
 ```
+
+The project will be available at: [http://localhost:5173](http://localhost:5173)
+
+---
+
+## Note
+
+* Lottie was not used.
+* No `dynamic import()` or `next/dynamic` was used.
+* Animation starts instantly when the page loads.
